@@ -3,12 +3,9 @@
 	"version": "0.0.1",
 	"displayName": "Unity Utilities",
 	"description": "These are the utilities of Ypmits",
-	"unity": "2019.1",
-	"unityRelease": "0b5",
-	"dependencies": {
-		"com.unity.some-package": "1.0.0",
-		"com.unity.other-package": "2.0.0"
-	},
+	"unity": "2019.3",
+	"unityRelease": "0b1",
+	"dependencies": {},
 	"keywords": [
 		"keyword1",
 		"keyword2",
