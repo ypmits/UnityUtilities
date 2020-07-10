@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace nl.ypmits.unity.gameutils
+namespace nl.ypmits.gametools
 {   
     public class SimpleMath
     {
