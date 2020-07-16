@@ -1,10 +1,15 @@
 using UnityEngine;
 
 
-namespace nl.ypmits.gametools
+namespace nl.ypmits.gametools.math
 {
 	public class SimpleMath
 	{
+		/**
+		<summary>
+		Sets an (euler)-angle between two points
+		</summary>
+		*/
 		public static bool SetAngleBetweenTwoPoints(Transform transf, Vector3 p1, Vector3 p2, bool useLerp = true, float degreeCorrection = 0, float minAngle = -180, float maxAngle = 180)
 		{
 			var dir = p1 - p2;
@@ -24,6 +29,10 @@ namespace nl.ypmits.gametools
 			return ((max < min) ? (min - max) : (min + max)) * percentage;
 		}
 
+		/**
+		<summary>
+		</summary>
+		*/
 		public static float GetAngleFromVector(Vector2 vec)
 		{
 			return Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
