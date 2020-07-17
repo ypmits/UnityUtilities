@@ -18,7 +18,6 @@ namespace nl.ypmits.gametools.camera
 		private static List<int> _connectedPlayers = new List<int>();
 		private static int _maxConnectedPlayers = 4;
 
-
 		public static CameraMultiplayer instance
 		{
 			get
