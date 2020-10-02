@@ -7,6 +7,11 @@ using UnityEditor;
 public class ReadOnlyAttribute : PropertyAttribute {}
  
 #if UNITY_EDITOR
+/**
+<summary>
+This is a helpful functionality that makes a property 'ReadOnly' in the editor, so you can't accidently or purposely change it.
+</summary>
+*/
 [CustomPropertyDrawer(typeof(ReadOnlyAttribute))]
 public class ReadOnlyDrawer : PropertyDrawer
 {
