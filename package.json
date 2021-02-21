@@ -2,21 +2,20 @@
   "name": "nl.ypmits.gametools",
   "displayName": "Ypmits GameTools",
   "version": "1.0.3",
-  "unity": "2019.1",
-  "author": {
-    "name": "Dave Lenz",
-    "email": "ypmits@gmail.com",
-    "url": "https://ypmits.nl"
-  },
   "description": "A reusable collection of tools and utilities for my own personal games.\nAll the different projects using overlapping classes gotten out of hands.\nThat's why I've got a central place to put all the tools, utilities etc.",
+  "author": "Dave Lenz <ypmits@gmail.com>",
+  "contributors": [{
+    "name": "Dave Lenz"
+  }],
+  "unity": "2019.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ypmits/UnityUtilities.git"
+  },
   "keywords": [
     "ypmits",
     "tools",
     "utility"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ypmits/UnityUtilities.git"
-  },
-  "type": "library"
+  "license": "BSD3"
 }
