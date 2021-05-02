@@ -7,6 +7,29 @@ namespace nl.ypmits.gametools.math
 	{
 		/**
 		<summary>
+		Return whichever number has a lower absolute value.
+		</summary>
+		*/
+		public static float LowestAbs(float a, float b)
+		{
+			return Mathf.Abs(a) < Mathf.Abs(b) ? a : b;
+		}
+
+		/**
+		<summary>
+		Return a point on a circle by giving an angle and a distance (radius)
+		</summary>
+		<returns>The point from angle and radius.</returns>
+		<param name="angle">Angle.</param>
+		<param name="radius">Radius of the circle.</param>
+		*/
+		public static Vector2 GetPointOnCircle(float angle, float radius)
+		{
+			return new Vector2(radius * Mathf.Cos(angle * Mathf.Deg2Rad), radius * Mathf.Sin(angle * Mathf.Deg2Rad));
+		}
+		
+		/**
+		<summary>
 		Sets an (euler)-angle between two points
 		</summary>
 		*/
