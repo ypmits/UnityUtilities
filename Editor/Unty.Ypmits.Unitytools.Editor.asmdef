@@ -1,8 +1,7 @@
 {
-    "name": "nl.ypmits.gametools",
+    "name": "ypmits.unitytools.editor",
     "references": [
-        "GUID:2bafac87e7f4b9b418d9448d219b01ab",
-        "GUID:27619889b8ba8c24980f49ee34dbb44a"
+        "ypmits.unitytools"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

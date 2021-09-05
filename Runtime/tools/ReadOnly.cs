@@ -3,11 +3,9 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace nl.ypmits.gametools.tools
-{
-	public class ReadOnlyAttribute : PropertyAttribute {}
-	
-	#if UNITY_EDITOR
+public class ReadOnlyAttribute : PropertyAttribute { }
+
+#if UNITY_EDITOR
 	/**
 	<summary>
 	This is a helpful functionality that makes a property 'ReadOnly' in the editor, so you can't accidently or purposely change it.
@@ -28,5 +26,4 @@ namespace nl.ypmits.gametools.tools
 			GUI.enabled = true;
 		}
 	}
-	#endif
-}
+#endif
