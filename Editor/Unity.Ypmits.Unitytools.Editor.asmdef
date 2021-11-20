@@ -1,9 +1,12 @@
 {
     "name": "ypmits.unitytools.editor",
+    "rootNamespace": "ypmits.unitytools.editor",
     "references": [
         "ypmits.unitytools"
     ],
-    "includePlatforms": [],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,
