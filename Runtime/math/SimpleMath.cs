@@ -8,10 +8,7 @@ public class SimpleMath
     Return whichever number has a lower absolute value.
     </summary>
     */
-    public static float LowestAbs(float a, float b)
-    {
-        return Mathf.Abs(a) < Mathf.Abs(b) ? a : b;
-    }
+    public static float LowestAbs(float a, float b) => Mathf.Abs(a) < Mathf.Abs(b) ? a : b;
 
     /**
     <summary>
@@ -21,10 +18,7 @@ public class SimpleMath
     <param name="angle">Angle.</param>
     <param name="radius">Radius of the circle.</param>
     */
-    public static Vector2 GetPointOnCircle(float angle, float radius)
-    {
-        return new Vector2(radius * Mathf.Cos(angle * Mathf.Deg2Rad), radius * Mathf.Sin(angle * Mathf.Deg2Rad));
-    }
+    public static Vector2 GetPointOnCircle(float angle, float radius) => new Vector2(radius * Mathf.Cos(angle * Mathf.Deg2Rad), radius * Mathf.Sin(angle * Mathf.Deg2Rad));
 
     /**
     <summary>
@@ -45,19 +39,14 @@ public class SimpleMath
     GetPercentageOf( 255, 0, 0.1f ); // returns 127.5
     </summary>
     */
-    public static float GetAmountByPercentage(float min, float max, float percentage)
-    {
-        return ((max < min) ? (min - max) : (min + max)) * percentage;
-    }
+    public static float GetAmountByPercentage(float min, float max, float percentage) => ((max < min) ? (min - max) : (min + max)) * percentage;
 
     /**
     <summary>
+    Returns an angle (in degrees) from a vector
     </summary>
     */
-    public static float GetAngleFromVector(Vector2 vec)
-    {
-        return Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
-    }
+    public static float GetAngleFromVector(Vector2 vec) => Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
 
     /**
     <summary>
