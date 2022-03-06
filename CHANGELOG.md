@@ -8,3 +8,6 @@
 
 2 May 2021:
 - Added a EditorUtils.Divider() to draw a divider in the inspector
+
+22 Feb 2022:
+- Trying to get the namespaces working

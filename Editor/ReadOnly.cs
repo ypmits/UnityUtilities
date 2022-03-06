@@ -1,11 +1,10 @@
 using UnityEngine;
-#if UNITY_EDITOR
 using UnityEditor;
-#endif
 
-public class ReadOnlyAttribute : PropertyAttribute { }
+namespace Ypmits.Unitytools
+{
+	public class ReadOnlyAttribute : PropertyAttribute { }
 
-#if UNITY_EDITOR
 	/**
 	<summary>
 	This is a helpful functionality that makes a property 'ReadOnly' in the editor, so you can't accidently or purposely change it.
@@ -26,4 +25,4 @@ public class ReadOnlyAttribute : PropertyAttribute { }
 			GUI.enabled = true;
 		}
 	}
-#endif
+}
