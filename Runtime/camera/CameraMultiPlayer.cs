@@ -3,21 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace nl.ypmits.gametools.camera
+/**
+<summary>
+All Camera-multiplayer-related stuff goes in here.
+Make sure
+</summary>
+*/
+namespace ypmits.unitytools
 {
-	/**
-	<summary>
-	All Camera-multiplayer-related stuff goes in here.
-	Make sure
-	</summary>
-	*/
 	public class CameraMultiplayer : MonoBehaviour
 	{
 		private static Camera _camera;
 		private static CameraMultiplayer _instance;
 		private static List<int> _connectedPlayers = new List<int>();
 		private static int _maxConnectedPlayers = 4;
-
 
 		public static CameraMultiplayer instance
 		{
@@ -41,7 +40,7 @@ namespace nl.ypmits.gametools.camera
 		*/
 		public void AddPlayer(int rewiredPlayerID)
 		{
-			if(_connectedPlayers.Count == _maxConnectedPlayers) throw new UnityException("You can't add more than 4 players to this camera-system.");
+			if (_connectedPlayers.Count == _maxConnectedPlayers) throw new UnityException("You can't add more than 4 players to this camera-system.");
 			_connectedPlayers.Add(rewiredPlayerID);
 			RedrawSystem();
 		}

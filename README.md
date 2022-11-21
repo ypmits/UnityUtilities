@@ -3,3 +3,6 @@ This package is made for my own personal projects. Right now I will not respond 
 This contains:
 - Utility libraries (math, strings etc.)
 - Utility components (custom components to make life easier)
+
+If you forgot:
+- Don't forget to change the version n package.json
