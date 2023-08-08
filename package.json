@@ -1,7 +1,7 @@
 {
     "name": "com.ypmits.unitytools",
     "displayName": "Ypmits UnityTools",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "A reusable collection of tools and utilities for my own personal games.\nAll the different projects using overlapping classes gotten out of hands.\nThat's why I've got a central place to put all the tools, utilities etc.",
     "author": "Dave Lenz <ypmits@gmail.com>",
     "contributors": [{

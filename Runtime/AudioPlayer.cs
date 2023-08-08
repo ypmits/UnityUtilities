@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ypmits.Unitytools
+namespace com.ypmits.unitytools
 {
 	public class AudioPlayerVO
 	{
@@ -22,7 +22,7 @@ namespace Ypmits.Unitytools
 			{
 				t = 0f;
 				_volume = value;
-				if(!_audioSource.isPlaying) _audioSource.Play();
+				if (!_audioSource.isPlaying) _audioSource.Play();
 			}
 		}
 		static float t = 0f;
@@ -30,7 +30,7 @@ namespace Ypmits.Unitytools
 
 		public AudioPlayer(AudioClip clip, Camera _camera, AudioPlayerVO vo = null)
 		{
-			if(vo == null) _vo = new AudioPlayerVO();
+			if (vo == null) _vo = new AudioPlayerVO();
 
 			_audioSource = _camera.gameObject.AddComponent<AudioSource>();
 			_audioSource.clip = clip;
@@ -42,8 +42,9 @@ namespace Ypmits.Unitytools
 		{
 			var time = ((_audioSource.volume < _volume) ? _vo.showTime : _vo.hideTime);
 			t += Time.deltaTime / time;
-			_audioSource.volume = Mathf.Clamp01( Mathf.Lerp(_audioSource.volume, _volume, t) );
-			if(_audioSource.volume <= .01) {
+			_audioSource.volume = Mathf.Clamp01(Mathf.Lerp(_audioSource.volume, _volume, t));
+			if (_audioSource.volume <= .01)
+			{
 				_audioSource.volume = 0;
 				_audioSource.Stop();
 			}

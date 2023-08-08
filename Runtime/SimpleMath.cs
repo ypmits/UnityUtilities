@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Ypmits.Unitytools
+namespace com.ypmits.unitytools
 {
 	public static class SimpleMath
 	{
