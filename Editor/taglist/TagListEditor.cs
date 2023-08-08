@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditorInternal;
 
 
-namespace Ypmits.Unitytools.Editor
+namespace Ypmits.Unitytools
 {
 	/**
 	<summary>

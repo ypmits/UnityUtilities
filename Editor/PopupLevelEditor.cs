@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using System.Reflection;
 using System;
 
-namespace Ypmits.Unitytools.Editor
+namespace Ypmits.Unitytools
 {
 	/**
 	<summary>
