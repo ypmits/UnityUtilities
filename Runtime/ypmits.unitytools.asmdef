@@ -1,6 +1,6 @@
 {
-    "name": "ypmits.unitytools",
-    "rootNamespace": "",
+    "name": "com.ypmits.unitytools",
+    "rootNamespace": "com.ypmits.unitytools",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

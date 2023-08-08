@@ -3,7 +3,7 @@ using UnityEditor;
 using System.IO;
 
 
-namespace Ypmits.Unitytools
+namespace com.ypmits.unitytools
 {
 	public static class DirectoryUtils
 	{
