@@ -7,7 +7,7 @@ using System.Reflection;
 
 
 
-namespace Ypmits.Unitytools
+namespace Ypmits.Unitytools.Editor
 {
 	public static class EditorUtils
 	{
@@ -18,7 +18,7 @@ namespace Ypmits.Unitytools
         */
 		public static void DrawHeader(string label = "{generic}", string info = "", float scale = .5f, Vector2 offset = new Vector2(), bool addSpaceAtEnd = false, bool drawBackground = true)
 		{
-			Texture tex = Resources.Load<Texture>("Editor/EditorHeader");
+			Texture tex = BuildTexture(100, 50, Color.White);// Resources.Load<Texture>("Editor/EditorHeader");
 			int fontSize = (int)((tex.height * .5f) * scale);
 			offset += new Vector2(10f * scale, 6f);
 			GUIStyle headerStyleShadow = new GUIStyle(EditorStyles.largeLabel), headerStyle = new GUIStyle(EditorStyles.largeLabel);

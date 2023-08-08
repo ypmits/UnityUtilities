@@ -1,5 +1,5 @@
 {
-    "name": "Unitytools Runtime",
+    "name": "Ypmits.Unitytools",
     "rootNamespace": "Ypmits.Unitytools",
     "references": [],
     "includePlatforms": [],

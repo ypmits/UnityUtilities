@@ -1,5 +1,5 @@
 {
-    "name": "Unitytools Editor",
+    "name": "Ypmits.Unitytools.Editor",
     "rootNamespace": "Ypmits.Unitytools",
     "references": [],
     "includePlatforms": [
