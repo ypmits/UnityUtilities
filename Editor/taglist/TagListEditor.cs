@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEditorInternal;
 
 
-namespace com.ypmits.unitytools
+namespace Ypmits.Unitytools
 {
 	/**
 	<summary>
