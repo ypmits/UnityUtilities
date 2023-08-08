@@ -7,7 +7,7 @@ using System.Reflection;
 
 
 
-namespace com.ypmits.unitytools
+namespace Ypmits.Unitytools
 {
 	public static class EditorUtils
 	{

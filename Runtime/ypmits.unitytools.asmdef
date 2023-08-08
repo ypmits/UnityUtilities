@@ -1,6 +1,6 @@
 {
     "name": "Unitytools Runtime",
-    "rootNamespace": "com.ypmits.unitytools",
+    "rootNamespace": "Ypmits.Unitytools",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

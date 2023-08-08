@@ -1,6 +1,6 @@
 {
     "name": "Unitytools Editor",
-    "rootNamespace": "com.ypmits.unitytools",
+    "rootNamespace": "Ypmits.Unitytools",
     "references": [],
     "includePlatforms": [
         "Editor"

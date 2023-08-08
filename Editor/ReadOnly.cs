@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace com.ypmits.unitytools
+namespace Ypmits.Unitytools
 {
 	public class ReadOnlyAttribute : PropertyAttribute { }
 

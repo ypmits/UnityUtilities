@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.ypmits.unitytools
+namespace Ypmits.Unitytools
 {
 	public class AudioPlayerVO
 	{

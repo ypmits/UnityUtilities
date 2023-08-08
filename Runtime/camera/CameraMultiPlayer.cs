@@ -9,7 +9,7 @@ All Camera-multiplayer-related stuff goes in here.
 Make sure
 </summary>
 */
-namespace com.ypmits.unitytools
+namespace Ypmits.Unitytools
 {
 	public class CameraMultiplayer : MonoBehaviour
 	{
