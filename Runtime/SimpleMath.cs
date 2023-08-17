@@ -51,6 +51,17 @@ namespace Ypmits.Unitytools
 
 		/**
 		<summary>
+		Returns a direction-vector from the rotation of a Transform
+		</summary>
+		*/
+		private static Vector2 GetDirectionFromRotation(Transform transform)
+		{
+			float angle = transform.eulerAngles.z * Mathf.Deg2Rad;
+			return new Vector2(Mathf.Cos(angle), Mathf.Sin(angle));
+		}
+
+		/**
+		<summary>
 		Returns a random true or false based on the given probabilityPercentage (default at 50%)
 		</summary>
 		*/
