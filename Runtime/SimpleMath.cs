@@ -47,7 +47,13 @@ namespace Ypmits.Unitytools
 		Returns an angle (in degrees) from a vector
 		</summary>
 		*/
-		public static float GetAngleFromVector(Vector2 vec) => Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
+		public static float GetAngleFromVector(Vector2 vec)
+		{
+			vec = vec.normalized;
+			float d = Mathf.Atan2(vec.x, vec.y) * Mathf.Rad2Deg;
+			if(d < 0) d += 360;
+			return d;
+		}
 
 		/**
 		<summary>

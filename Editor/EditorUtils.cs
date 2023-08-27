@@ -11,6 +11,8 @@ namespace Ypmits.Unitytools
 {
 	public static class EditorUtils
 	{
+		private static Dictionary<string, bool> s_prefs = new Dictionary<string, bool>();
+
 		/**
         <summary>
         Draws a header with an texture and some text with shadow
@@ -216,6 +218,92 @@ namespace Ypmits.Unitytools
 				layerNames.Add(LayerMask.LayerToName(i));
 			return layerNames;
 		}
+		
+		/**
+		<summary>
+		Draws a foldout and returns if it's folded out or not.
+		The 'pre' (a unique EditorPrefs-name) will be used to save the data to the EditorPrefs.
+		The 'str' is a string that will be visible in the header of the 'toggler'.
+		The 'dict' is the dictionary that will be used to look up the GUIContent-data
+		Make sure you'll call EditorUtils.PrefsTogglerFoldoutClose(); (or GUILayout.EndVertical();) afterwards!
+		Example:
+		if(PrefsTogglerFoldout2("showWeaponCollectable")) {
+			// Draw Editor-stuff for weaponstuff
+		}
+		</summary>
+		*/
+		public static void PrefsTogglerFoldout2(string pre, string str, GUIContent guicontent, UnityAction action, bool useSurroundingHelpbox = true)
+		{
+			string uniquePrefsName = $"{pre}{str}";
+			int i = EditorPrefs.GetInt(uniquePrefsName, 1);
+			var returnBool = i == 1;
+			if (s_prefs.ContainsKey(uniquePrefsName))
+			{
+				s_prefs[uniquePrefsName] = returnBool;
+			}
+			else s_prefs.Add(uniquePrefsName, returnBool);
+
+			EditorGUI.indentLevel = 1;
+			GUILayout.BeginVertical(useSurroundingHelpbox ? EditorStyles.helpBox : GUIStyle.none);
+			returnBool = EditorGUILayout.Foldout(i == 1, guicontent);
+			EditorPrefs.SetInt(uniquePrefsName, returnBool ? 1 : 0);
+			EditorGUI.indentLevel = 1;
+			if (returnBool) action.Invoke();
+			GUILayout.EndVertical();
+		}
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+/**
+	<summary>
+	Draws a foldout and returns if it's folded out or not.
+	The 'uniquePrefsName' will be used to save to the EditorPrefs.
+	Make sure you'll call EditorUtils.PrefsTogglerFoldoutClose(); (or GUILayout.EndVertical();) afterwards!
+	Example:
+	if(PrefsToggler("showWeaponCollectable")) {
+		// Draw Editor-stuff for weaponstuff
+	}
+	</summary>
+	*/
+/**
+	public static bool PrefsTogglerFoldout(string uniqueEditorPrefsString, GUIContent guiContent, bool useSurroundingHelpbox = true)
+	{
+		int i = EditorPrefs.GetInt(uniqueEditorPrefsString, 1);
+		var returnBool = i == 1;
+		if (s_prefs.ContainsKey(uniqueEditorPrefsString)) s_prefs[uniqueEditorPrefsString] = returnBool;
+		else s_prefs.Add(uniqueEditorPrefsString, returnBool);
+
+		EditorGUI.indentLevel = 1;
+		GUILayout.BeginVertical(useSurroundingHelpbox ? EditorStyles.helpBox : GUIStyle.none);
+		returnBool = EditorGUILayout.Foldout(i == 1 ? true : false, guiContent);
+		EditorPrefs.SetInt(uniqueEditorPrefsString, returnBool ? 1 : 0);
+		EditorGUI.indentLevel = 1;
+		return returnBool;
+	}
+
+	public static void PrefsTogglerFoldoutClose()
+	{
+		GUILayout.EndVertical();
+	}
+
+
+	public static bool DisplayDialog(string title, string message, string ok, string cancel, bool altCtrl = true, Event e = null)
+	{
+		bool ac = false;
+		if (altCtrl && e != null) ac = (Event.current.alt && Event.current.control);
+		return (ac || EditorUtility.DisplayDialog(title: "Warning!", message: message, ok: ok, cancel: cancel));
+	}
+	/**
+
+*/
