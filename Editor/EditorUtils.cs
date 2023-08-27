@@ -231,9 +231,8 @@ namespace Ypmits.Unitytools
 		}
 		</summary>
 		*/
-		public static void PrefsTogglerFoldout2(string pre, string str, GUIContent guicontent, UnityAction action, bool useSurroundingHelpbox = true)
+		public static void PrefsTogglerFoldout2(string uniquePrefsName, GUIContent guicontent, UnityEvent action, bool useSurroundingHelpbox = true)
 		{
-			string uniquePrefsName = $"{pre}{str}";
 			int i = EditorPrefs.GetInt(uniquePrefsName, 1);
 			var returnBool = i == 1;
 			if (s_prefs.ContainsKey(uniquePrefsName))
@@ -250,7 +249,6 @@ namespace Ypmits.Unitytools
 			if (returnBool) action.Invoke();
 			GUILayout.EndVertical();
 		}
-
 	}
 }
 
