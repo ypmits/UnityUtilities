@@ -231,7 +231,7 @@ namespace Ypmits.Unitytools
 		}
 		</summary>
 		*/
-		public static void PrefsTogglerFoldout2(string uniquePrefsName, GUIContent guicontent, UnityEvent action, bool useSurroundingHelpbox = true)
+		public static void PrefsTogglerFoldout2(string uniquePrefsName, GUIContent guicontent, UnityAction action, bool useSurroundingHelpbox = true)
 		{
 			int i = EditorPrefs.GetInt(uniquePrefsName, 1);
 			var returnBool = i == 1;
